@@ -7,7 +7,8 @@
     --colorSoftMagenta: hsl(300, 69%, 71%);
     --font-family-headings: 'Open Sans', sans-serif;
     --font-family-body: 'Poppins', sans-serif;
-    --padding: 20px 20px;
+    --paddingLength: 10px;
+    --padding: var(--paddingLength) var(--paddingLength) var(--paddingLength) var(--paddingLength);
     --font-size: 14px;
   }
 
@@ -72,6 +73,9 @@
     flex-direction: column;
     align-items: center;
     gap: 25px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   header {
@@ -127,15 +131,19 @@
     flex-direction: row;
     justify-content: center;
     gap: 15px;
-    margin-top: var(--padding);
+    margin-top: calc(var(--paddingLength) * 3);
   }
 
   .redes_sociales .image_icono {
-    width: 30px;
+    width: 40px;
+    padding: 2px 2px 2px 2px;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
   }
 
   /* Media query para mayor a 375px */
-  @media (width > 500px) {
+  @media (width > 550px) {
     :root {
       
     }
@@ -146,6 +154,8 @@
 
     main {
       /* border: 2px green solid; */
+      width: 80%;
+      margin: 0 auto;
     }
 
     .logo img {
@@ -183,9 +193,10 @@
     .redes_sociales {
       justify-content: end;
       padding-right: 20px;
+      margin-top: var(--paddingLength);
     }
 
     .redes_sociales .image_icono {
-      width: 25px;
+      width: 35px;
     }
   }
